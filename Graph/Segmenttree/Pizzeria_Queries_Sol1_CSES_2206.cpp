@@ -105,9 +105,9 @@ void solve()
     {
       int ind;
       cin >> ind;
-      int q1 = query(tree1, 1, 1, n, ind, n) - ind;
-      int q2 = query(tree2, 1, 1, n, 1, ind) + ind;
-      cout << min(q1, q2) << "\n";
+      int q1 = query(tree1, 1, 1, n, ind, n) - ind;   //for find right part minimum--- - ind because previous calculation  arr[st]+st;
+      int q2 = query(tree2, 1, 1, n, 1, ind) + ind;    ////for find left part minimum
+      cout << min(q1, q2) << "\n";     //minimum of left and right minimum cost
     }
   }
 }
@@ -118,3 +118,11 @@ int32_t main()
 
   return 0;
 }
+/*
+6 3
+8 6 4 5 7 5
+2 2
+1 5 1
+2 2
+
+*/
